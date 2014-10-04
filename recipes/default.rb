@@ -27,6 +27,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include_recipe 'apt::default'
+
 ssh_known_hosts_entry 'bitbucket.org'
 
 include_recipe "jenkins_drupal::jenkins"
