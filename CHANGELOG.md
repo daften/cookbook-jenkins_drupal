@@ -3,6 +3,10 @@ jenkins_drupal CHANGELOG
 
 This file is used to list changes made in each version of the iminds_academy_jenkins cookbook.
 
+0.1.3  (2014-10)
+------------------
+- [Dieter Blomme] - Add berksfile
+
 0.1.2  (2014-09-16)
 ------------------
 - [Dieter Blomme] - Change from a stored private key to generated keys for security reasons
