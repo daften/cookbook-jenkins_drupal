@@ -10,7 +10,7 @@ recipe           "jenkins_drupal::jenkins", "Installs jenkins as a package with 
 recipe           "jenkins_drupal::coding_standards", "Install jenkins plugins and packages for code style testing"
 recipe           "jenkins_drupal::selenium", "Installs jenkins plugins and dependencies for selenium testing (on Saucelabs)"
 
-%w{ jenkins phpcs ssh_known_hosts maven }.each do |cb|
+%w{ apt jenkins phpcs ssh_known_hosts maven }.each do |cb|
   depends cb
 end
 
