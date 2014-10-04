@@ -6,6 +6,8 @@ This file is used to list changes made in each version of the iminds_academy_jen
 0.1.3  (2014-10)
 ------------------
 - [Dieter Blomme] - Add berksfile
+- [Dieter Blomme] - Add travis config for foodcritic testing
+- [Dieter Blomme] - Add basic kitchen set-up
 
 0.1.2  (2014-09-16)
 ------------------
