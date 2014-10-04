@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-
-gem 'berkshelf'
 gem 'rake'
 
 # Uncomment these lines if you want to live on the Edge:
@@ -20,6 +18,7 @@ group :unit do
 end
 
 group :integration do
+  gem 'berkshelf'
   gem 'test-kitchen'
   gem 'kitchen-vagrant'
 end
