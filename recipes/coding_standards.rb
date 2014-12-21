@@ -40,6 +40,14 @@ git "#{Chef::Config[:file_cache_path]}/coder" do
   notifies :run, "bash[copy-drupal-standard]"
 end
 
+directory "$(pear config-get php_dir)/PHP/CodeSniffer/Standards/" do
+  owner 'root'
+  group 'root'
+  mode '0655'
+  recursive true
+  action :create
+end
+
 bash "copy-drupal-standard" do
   user "root"
   code <<-EOH
