@@ -29,3 +29,5 @@ include_recipe "jenkins_drupal::ssh_keygen"
 include_recipe "jenkins_drupal::coding_standards"
 
 include_recipe "jenkins_drupal::selenium"
+
+include_recipe "jenkins_drupal::drush"
