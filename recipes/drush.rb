@@ -20,15 +20,4 @@
 #
 
 include_recipe 'apt::default'
-include_recipe "git"
-include_recipe "php"
-
-git "#{node['drush']['install_dir']}/drush" do
-  repository "https://github.com/drush-ops/drush.git"
-  reference node['drush']['drush_version']
-  action :sync
-end
-
-link "/usr/bin/drush" do
-  to "#{node['drush']['install_dir']}/drush/drush"
-end
+include_recipe 'composer'
