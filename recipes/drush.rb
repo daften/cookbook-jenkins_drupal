@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: jenkins_drupal
-# Recipe:: default
+# Recipe:: drush
 #
 # Author:: Dieter Blomme <dieterblomme@gmail.com>
 #
@@ -18,14 +18,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 include_recipe 'apt::default'
+include_recipe "git"
+include_recipe "php"
 
-ssh_known_hosts_entry 'bitbucket.org'
+git "#{node['drush']['install_dir']}/drush" do
+  repository "https://github.com/drush-ops/drush.git"
+  reference node['drush']['drush_version']
+  action :sync
+end
 
-include_recipe "jenkins_drupal::jenkins"
-
-include_recipe "jenkins_drupal::ssh_keygen"
-
-include_recipe "jenkins_drupal::coding_standards"
-
-include_recipe "jenkins_drupal::selenium"
+link "/usr/bin/drush" do
+  to "#{node['drush']['install_dir']}/drush/drush"
+end
