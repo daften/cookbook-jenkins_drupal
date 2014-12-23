@@ -19,8 +19,7 @@
 # limitations under the License.
 #
 
-include_recipe 'apt::default'
-include_recipe "git"
+include_recipe 'git'
 include_recipe 'composer'
 
 git "#{node['drush']['install_dir']}/drush" do
