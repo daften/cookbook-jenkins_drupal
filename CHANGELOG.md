@@ -3,9 +3,9 @@ jenkins_drupal CHANGELOG
 
 This file is used to list changes made in each version of the iminds_academy_jenkins cookbook.
 
-0.1.4  (2014-12)
+0.1.4  (2014-12-23)
 ------------------
-- [Dieter Blomme] -
+- [Dieter Blomme] - Add drush installation
 
 0.1.3  (2014-10)
 ------------------

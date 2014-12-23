@@ -16,6 +16,8 @@ Requirements
 * jenkins (to install jenkins)
 * phpcs (to install phpcs for coding standards)
 * ssh_knownn_hosts (to add bitbucket as a git hosting platform)
+* selenium (to install maven to have selenium grid support)
+* drush (to install drush)
 
 Attributes
 ----------
