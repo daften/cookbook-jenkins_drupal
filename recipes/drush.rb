@@ -38,7 +38,7 @@ bash "Install drush via composer" do
   EOH
 end
 
-tar_extract "#{node['drush']['console_table_url']}" do
+tar_extract node['drush']['console_table_url'] do
   target_dir "#{node['drush']['install_dir']}/drush/lib"
   creates "#{node['drush']['install_dir']}/drush/lib/Console_Table-1.1.3"
 end
