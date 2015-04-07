@@ -39,13 +39,9 @@ jenkins_plugins = ['token-macro', 'mailer', 'javadoc', 'maven-plugin',
   'git-client', 'git',
   'matrix-auth', 'cloudbees-folder',
   'ws-cleanup',
-  'scm-sync-configuration']
+  'scm-sync-configuration',
+  'bitbucket-pullrequest-builder']
 
 jenkins_plugins.each do |plugin|
   jenkins_plugin plugin
-end
-
-# Add bitbucket integration; to be removed
-jenkins_plugin 'bitbucket-pullrequest-builder' do
-  source 'http://doc.densan-labs.net/bitbucket-pullrequest-builder.hpi'
 end
